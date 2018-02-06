@@ -1,5 +1,3 @@
-
-
 <!doctype html>
 <html lang="en">
 	<head>
@@ -12,15 +10,20 @@
 		<title>Newman-Peacock Score Calculator</title>
 	</head>
 	<body>
+		<nav class="navbar navbar-dark bg-primary">
+			<div class="container">
+				<a id="page-title" class="navbar-brand">Newman-Peacock Score Calculator</a>
+			</div>
+		</nav>
+
 		<div class="container">
-		<h1>Newman-Peacock Score Calculator</h1>
 		<div class="row">
 		<div class="col-sm-7">
 			<form>
 				<div class="row">
 					<div class="col-sm-7">
 						<div class="form-group">
-							<h2>Estimated Fetal Weight</h2>
+							<h2 class="factor-title">Estimated Fetal Weight</h2>
 							<div class="btn-group" data-toggle="buttons">
 								<label class="btn btn-primary">
 								<input type="radio" name="efw" id="efw0" value="0" autocomplete="off">&lt;&nbsp;2600 g</input>
@@ -36,7 +39,7 @@
 					</div>
 					<div class="col-sm-3">
 						<div class="form-group">
-							<h2>Parity</h2>
+							<h2 class="factor-title">Parity</h2>
 							<div class="btn-group" data-toggle="buttons">
 								<label class="btn btn-primary">
 								<input type="radio" name="parity" id="parity0" value="0" autocomplete="off">0</input>
@@ -55,7 +58,7 @@
 				<div class="row">
 					<div class="col-sm-7">
 						<div class="form-group">
-							<h2>Placental Location</h2>
+							<h2 class="factor-title">Placental Location</h2>
 							<div class="btn-group" data-toggle="buttons">
 								<label class="btn btn-primary">
 								<input type="radio" name="placenta" id="placenta0" value="0" autocomplete="off">Anterior</input>
@@ -71,7 +74,7 @@
 					</div>
 					<div class="col-sm-3">
 						<div class="form-group">
-							<h2>Station</h2>
+							<h2 class="factor-title">Station</h2>
 							<div class="btn-group" data-toggle="buttons">
 								<label class="btn btn-primary">
 								<input type="radio" name="station" id="station0" value="0" autocomplete="off">&ge;-1</input>
@@ -90,7 +93,7 @@
 				<div class="row">
 					<div class="col-sm-5">
 						<div class="form-group">
-							<h2>Cervical Dilation</h2>
+							<h2 class="factor-title">Cervical Dilation</h2>
 							<div class="btn-group" data-toggle="buttons">
 								<label class="btn btn-primary">
 								<input type="radio" name="dilation" id="dilation0" value="0" autocomplete="off">&ge;&nbsp;3 cm</input>
