@@ -1,10 +1,11 @@
+
+
 <!doctype html>
 <html lang="en">
 	<head>
 		<!-- Required meta tags -->
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
 		<!-- Bootstrap CSS -->
 		<link href="css/bootstrap.min.css" rel="stylesheet"/>
 		<link href="css/npcalc.css" rel="stylesheet"/>
@@ -12,62 +13,39 @@
 	</head>
 	<body>
 		<div class="container">
-			<h1>Newman-Peacock Score Calculator</h1>
-
+		<h1>Newman-Peacock Score Calculator</h1>
+		<div class="row">
+		<div class="col-sm-7">
 			<form>
 				<div class="row">
-					<div class="col-sm-4">
+					<div class="col-sm-7">
 						<div class="form-group">
 							<h2>Estimated Fetal Weight</h2>
 							<div class="btn-group" data-toggle="buttons">
 								<label class="btn btn-primary">
-									<input type="radio" name="efw" id="efw0" value="0" autocomplete="off">&lt;&nbsp;2600 g</input>
+								<input type="radio" name="efw" id="efw0" value="0" autocomplete="off">&lt;&nbsp;2600 g</input>
 								</label>
-
 								<label class="btn btn-primary">
-									<input type="radio" name="efw" id="efw1" value="1" autocomplete="off">2500&ndash;3500 g</input>
+								<input type="radio" name="efw" id="efw1" value="1" autocomplete="off">2500&ndash;3500 g</input>
 								</label>
-
 								<label class="btn btn-primary">
-									<input type="radio" name="efw" id="efw2" value="2" autocomplete="off">&gt;3500 g</input>
+								<input type="radio" name="efw" id="efw2" value="2" autocomplete="off">&gt;3500 g</input>
 								</label>
 							</div>
 						</div>
 					</div>
-
-					<div class="col-sm-2">
+					<div class="col-sm-3">
 						<div class="form-group">
 							<h2>Parity</h2>
 							<div class="btn-group" data-toggle="buttons">
 								<label class="btn btn-primary">
-									<input type="radio" name="parity" id="parity0" value="0" autocomplete="off">0</input>
+								<input type="radio" name="parity" id="parity0" value="0" autocomplete="off">0</input>
 								</label>
-
 								<label class="btn btn-primary">
-									<input type="radio" name="parity" id="parity1" value="1" autocomplete="off">1</input>
+								<input type="radio" name="parity" id="parity1" value="1" autocomplete="off">1</input>
 								</label>
-
 								<label class="btn btn-primary">
-									<input type="radio" name="parity" id="parity2" value="2" autocomplete="off">&gt;2</input>
-								</label>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-sm-3">
-						<div class="form-group">
-							<h2>Dilation</h2>
-							<div class="btn-group" data-toggle="buttons">
-								<label class="btn btn-primary">
-									<input type="radio" name="dilation" id="dilation0" value="0" autocomplete="off">&ge;&nbsp;3 cm</input>
-								</label>
-
-								<label class="btn btn-primary">
-									<input type="radio" name="dilation" id="dilation1" value="1" autocomplete="off">1&ndash;2 cm</input>
-								</label>
-
-								<label class="btn btn-primary">
-									<input type="radio" name="dilation" id="dilation2" value="2" autocomplete="off">0 cm</input>
+								<input type="radio" name="parity" id="parity2" value="2" autocomplete="off">&gt;2</input>
 								</label>
 							</div>
 						</div>
@@ -75,39 +53,53 @@
 				</div>
 
 				<div class="row">
-					<div class="col-sm-4">
+					<div class="col-sm-7">
 						<div class="form-group">
-							<h2>Placenta</h2>
+							<h2>Placental Location</h2>
 							<div class="btn-group" data-toggle="buttons">
 								<label class="btn btn-primary">
-									<input type="radio" name="placenta" id="placenta0" value="0" autocomplete="off">Anterior</input>
+								<input type="radio" name="placenta" id="placenta0" value="0" autocomplete="off">Anterior</input>
 								</label>
-
 								<label class="btn btn-primary">
-									<input type="radio" name="placenta" id="placenta1" value="1" autocomplete="off">Posterior</input>
+								<input type="radio" name="placenta" id="placenta1" value="1" autocomplete="off">Posterior</input>
 								</label>
-
 								<label class="btn btn-primary">
-									<input type="radio" name="placenta" id="placenta2" value="2" autocomplete="off">Lateral/Fundal</input>
+								<input type="radio" name="placenta" id="placenta2" value="2" autocomplete="off">Lateral/Fundal</input>
 								</label>
 							</div>
 						</div>
 					</div>
-
-					<div class="col-sm-2">
+					<div class="col-sm-3">
 						<div class="form-group">
 							<h2>Station</h2>
 							<div class="btn-group" data-toggle="buttons">
 								<label class="btn btn-primary">
-									<input type="radio" name="station" id="station0" value="0" autocomplete="off">&ge;-1</input>
+								<input type="radio" name="station" id="station0" value="0" autocomplete="off">&ge;-1</input>
 								</label>
-
 								<label class="btn btn-primary">
-									<input type="radio" name="station" id="station1" value="1" autocomplete="off">-2</input>
+								<input type="radio" name="station" id="station1" value="1" autocomplete="off">-2</input>
 								</label>
-
 								<label class="btn btn-primary">
-									<input type="radio" name="station" id="station2" value="2" autocomplete="off">&le;-3</input>
+								<input type="radio" name="station" id="station2" value="2" autocomplete="off">&le;-3</input>
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-sm-5">
+						<div class="form-group">
+							<h2>Cervical Dilation</h2>
+							<div class="btn-group" data-toggle="buttons">
+								<label class="btn btn-primary">
+								<input type="radio" name="dilation" id="dilation0" value="0" autocomplete="off">&ge;&nbsp;3 cm</input>
+								</label>
+								<label class="btn btn-primary">
+								<input type="radio" name="dilation" id="dilation1" value="1" autocomplete="off">1&ndash;2 cm</input>
+								</label>
+								<label class="btn btn-primary">
+								<input type="radio" name="dilation" id="dilation2" value="2" autocomplete="off">0 cm</input>
 								</label>
 							</div>
 						</div>
@@ -115,21 +107,37 @@
 				</div>
 			</form>
 
-			<div id="result-panel" class="panel panel-primary">
-				<div id="result-heading" class="panel-heading">Likelihood of success</div>
-				<div class="panel-body">
-					<div class="row">
-						<div id="result-score" class="col-xs-1">#</div>
-						<div id="result-info" class="col-xs-11">
-							Please enter all above values to calculate likelihood of success.
+			<div class="row">
+			<div class="col-sm-12">
+				<div id="result-panel" class="panel panel-primary">
+					<div id="result-heading" class="panel-heading">Likelihood of success</div>
+					<div class="panel-body">
+						<div class="row">
+							<div id="result-score" class="col-xs-1">#</div>
+							<div id="result-info" class="col-xs-11">
+								<p>Please enter all above values to calculate likelihood of success.</p>
+							</div>
 						</div>
+					</div>
 				</div>
 			</div>
-
-			<script src="js/jquery-3.3.1.min.js"></script>
-			<script src="js/popper.min.js"></script>
-			<script src="js/bootstrap.min.js"></script>
-			<script src="js/npcalc.js"></script>
+			</div>
 		</div>
+
+		<div class="col-sm-5">
+			<div class="panel panel-info">
+				<div class="panel-heading"><strong>The Newman-Peacock Score</strong></div>
+				<div class="panel-body">
+					<p>The Newman-Peacock score is used to estimate the probability of successfully performing <a href="https://www.aafp.org/afp/1998/0901/p731.html">external cephalic version</a> (ECV) in the event of fetal breech presentation. It was defined in a 1993 study of ECV performance in a single institution (<a href="https://doi.org/10.1016/0002-9378(93)90071-P">Newman RB, Peacock BS, Vandorsten JP, Hunt HH. Predicting success of external cephalic version. Am J Obstet Gynecol. 1993;169(2 Pt 1):245-9</a>), which identified five factors that predominantly affect the likelihood of successful version (estimated fetal weight, parity, placenta location, station, and cervical dilation).</p>
+					<p>This website is provided for informational use only, and is not intended to provide medical or professional advice. Healthcare practioners should exercise their own clinical judgement in the use of this website. Non-healthcare practioners should consult a healthcare practioner regarding medical concerns; use of this website is at their own risk.</p>
+				</div>
+			</div>
+		</div>
+		</div>
+		
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/popper.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/npcalc.js"></script>
 	</body>
 </html>
