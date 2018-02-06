@@ -27,9 +27,11 @@ h2.factor-title {
 }
 
 #result-score {
-	font-size: 25pt;
+	font-size: 30pt;
 	font-weight: bold;
 	text-align: center;
+	line-height: 1;
+	padding-right: 0;
 }
 
 #result-heading {
