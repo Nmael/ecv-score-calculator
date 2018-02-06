@@ -1,3 +1,30 @@
+body {
+	color: #343A40;
+}
+
+a#page-title, a#page-title:hover {
+	color: #FFFFFF;
+	font-weight: bold;
+	padding: 5px 5px;
+}
+
+@media (min-width: 768px) {
+	a#page-title, a#page-title:hover {
+		font-size: 24pt;
+		padding: 15px 15px;
+	}
+}
+
+h2.factor-title {
+	font-size: 14pt;
+	font-weight: bold;
+	margin-top: 0.5em;
+}
+
+#result-panel {
+	margin-top: 1em;
+}
+
 #result-score {
 	font-size: 25pt;
 	font-weight: bold;
