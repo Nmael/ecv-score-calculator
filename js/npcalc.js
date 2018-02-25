@@ -40,7 +40,7 @@ var cartQNullipBreech = new cartQuestion(
 
 var cartQNullipBMI = new cartQuestion(
 	'nullip-bmi', 'BMI',
-	[new cartOption('&ge;32.7', 39, null), new cartOption('32.7', 51, cartQNullipBreech)]
+	[new cartOption('&ge;32.7', 39, null), new cartOption('&lt;32.7', 51, cartQNullipBreech)]
 );
 
 var cartQNullipPlacenta = new cartQuestion(
@@ -70,7 +70,7 @@ var cartQMultipPlacenta = new cartQuestion(
 
 var cartQMultipGA = new cartQuestion(
 	'multip-ga', 'Gestational Age',
-	[new cartOption('&ge;37 weeks, 0 days', 59, cartQMultipPlacenta), new cartOption('<37 weeks, 0 days', 75, cartQMultipFetalHead)]
+	[new cartOption('&ge;37 weeks, 0 days', 59, cartQMultipPlacenta), new cartOption('&lt;37 weeks, 0 days', 75, cartQMultipFetalHead)]
 );
 
 var cartQMultipEngagement = new cartQuestion(
