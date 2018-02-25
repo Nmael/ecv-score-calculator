@@ -13,16 +13,25 @@ gtag('config', 'UA-37236817-4');
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<link href="css/bootstrap.min.css" rel="stylesheet"/>
 		<link href="css/npcalc.css" rel="stylesheet"/>
-		<title>Newman-Peacock Score Calculator</title>
+		<title>ECV Score Calculator</title>
 	</head>
 	<body>
-		<nav class="navbar navbar-dark bg-primary">
+		<nav id="navbar-upper" class="navbar navbar-dark bg-primary">
 			<div class="container">
-				<a id="page-title" class="navbar-brand">Newman-Peacock Score Calculator</a>
+				<a id="page-title" class="navbar-brand">ECV Score Calculator</a>
 			</div>
 		</nav>
 
-		<div class="container">
+		<nav id="navbar-lower" class="navbar navbar-light bg-info">
+			<div class="container">
+				<ul class="nav navbar-nav">
+					<li id="nav-np" class="active"><a id="nav-np-link" href="#np">Newman-Peacock</a></li>
+					<li id="nav-cart"><a id="nav-cart-link" href="#cart">CART Tree</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<div id="calc-np" class="container">
 			<div class="row">
 				<div class="col-sm-7">
 					<form>
@@ -30,15 +39,15 @@ gtag('config', 'UA-37236817-4');
 							<div class="col-sm-7">
 								<div class="form-group">
 									<h2 class="factor-title">Estimated Fetal Weight</h2>
-									<div class="btn-group" data-toggle="buttons">
+									<div class="btn-group np-btn-group" data-toggle="buttons">
 										<label class="btn btn-primary">
-											<input type="radio" name="efw" id="efw0" value="0" autocomplete="off">&lt;&nbsp;2600 g</input>
+											<input type="radio" name="np-efw" id="np-efw0" value="0" autocomplete="off">&lt;&nbsp;2600 g</input>
 										</label>
 										<label class="btn btn-primary">
-											<input type="radio" name="efw" id="efw1" value="1" autocomplete="off">2500 &ndash; 3500 g</input>
+											<input type="radio" name="np-efw" id="np-efw1" value="1" autocomplete="off">2500 &ndash; 3500 g</input>
 										</label>
 										<label class="btn btn-primary">
-											<input type="radio" name="efw" id="efw2" value="2" autocomplete="off">&gt;&nbsp;3500 g</input>
+											<input type="radio" name="np-efw" id="np-efw2" value="2" autocomplete="off">&gt;&nbsp;3500 g</input>
 										</label>
 									</div>
 								</div>
@@ -46,15 +55,15 @@ gtag('config', 'UA-37236817-4');
 							<div class="col-sm-3">
 								<div class="form-group">
 									<h2 class="factor-title">Parity</h2>
-									<div class="btn-group" data-toggle="buttons">
+									<div class="btn-group np-btn-group" data-toggle="buttons">
 										<label class="btn btn-primary">
-											<input type="radio" name="parity" id="parity0" value="0" autocomplete="off">0</input>
+											<input type="radio" name="np-parity" id="np-parity0" value="0" autocomplete="off">0</input>
 										</label>
 										<label class="btn btn-primary">
-											<input type="radio" name="parity" id="parity1" value="1" autocomplete="off">1</input>
+											<input type="radio" name="np-parity" id="np-parity1" value="1" autocomplete="off">1</input>
 										</label>
 										<label class="btn btn-primary">
-											<input type="radio" name="parity" id="parity2" value="2" autocomplete="off">&gt;2</input>
+											<input type="radio" name="np-parity" id="np-parity2" value="2" autocomplete="off">&gt;2</input>
 										</label>
 									</div>
 								</div>
@@ -65,15 +74,15 @@ gtag('config', 'UA-37236817-4');
 							<div class="col-sm-7">
 								<div class="form-group">
 									<h2 class="factor-title">Placental Location</h2>
-									<div class="btn-group" data-toggle="buttons">
+									<div class="btn-group np-btn-group" data-toggle="buttons">
 										<label class="btn btn-primary">
-											<input type="radio" name="placenta" id="placenta0" value="0" autocomplete="off">Anterior</input>
+											<input type="radio" name="np-placenta" id="np-placenta0" value="0" autocomplete="off">Anterior</input>
 										</label>
 										<label class="btn btn-primary">
-											<input type="radio" name="placenta" id="placenta1" value="1" autocomplete="off">Posterior</input>
+											<input type="radio" name="np-placenta" id="np-placenta1" value="1" autocomplete="off">Posterior</input>
 										</label>
 										<label class="btn btn-primary">
-											<input type="radio" name="placenta" id="placenta2" value="2" autocomplete="off">Lateral/Fundal</input>
+											<input type="radio" name="np-placenta" id="np-placenta2" value="2" autocomplete="off">Lateral/Fundal</input>
 										</label>
 									</div>
 								</div>
@@ -81,15 +90,15 @@ gtag('config', 'UA-37236817-4');
 							<div class="col-sm-3">
 								<div class="form-group">
 									<h2 class="factor-title">Station</h2>
-									<div class="btn-group" data-toggle="buttons">
+									<div class="btn-group np-btn-group" data-toggle="buttons">
 										<label class="btn btn-primary">
-											<input type="radio" name="station" id="station0" value="0" autocomplete="off">&ge;-1</input>
+											<input type="radio" name="np-station" id="np-station0" value="0" autocomplete="off">&ge;-1</input>
 										</label>
 										<label class="btn btn-primary">
-											<input type="radio" name="station" id="station1" value="1" autocomplete="off">-2</input>
+											<input type="radio" name="np-station" id="np-station1" value="1" autocomplete="off">-2</input>
 										</label>
 										<label class="btn btn-primary">
-											<input type="radio" name="station" id="station2" value="2" autocomplete="off">&le;-3</input>
+											<input type="radio" name="np-station" id="np-station2" value="2" autocomplete="off">&le;-3</input>
 										</label>
 									</div>
 								</div>
@@ -100,15 +109,15 @@ gtag('config', 'UA-37236817-4');
 							<div class="col-sm-5">
 								<div class="form-group">
 									<h2 class="factor-title">Cervical Dilation</h2>
-									<div class="btn-group" data-toggle="buttons">
+									<div class="btn-group np-btn-group" data-toggle="buttons">
 										<label class="btn btn-primary">
-											<input type="radio" name="dilation" id="dilation0" value="0" autocomplete="off">&ge;&nbsp;3 cm</input>
+											<input type="radio" name="np-dilation" id="np-dilation0" value="0" autocomplete="off">&ge;&nbsp;3 cm</input>
 										</label>
 										<label class="btn btn-primary">
-											<input type="radio" name="dilation" id="dilation1" value="1" autocomplete="off">1&ndash;2 cm</input>
+											<input type="radio" name="np-dilation" id="np-dilation1" value="1" autocomplete="off">1&ndash;2 cm</input>
 										</label>
 										<label class="btn btn-primary">
-											<input type="radio" name="dilation" id="dilation2" value="2" autocomplete="off">0 cm</input>
+											<input type="radio" name="np-dilation" id="np-dilation2" value="2" autocomplete="off">0 cm</input>
 										</label>
 									</div>
 								</div>
@@ -118,12 +127,12 @@ gtag('config', 'UA-37236817-4');
 
 					<div class="row">
 						<div class="col-sm-12">
-							<div id="result-panel" class="panel panel-primary">
-								<div id="result-heading" class="panel-heading">Likelihood of success</div>
+							<div id="np-result-panel" class="panel panel-primary result-panel">
+								<div id="np-result-heading" class="panel-heading result-heading">Likelihood of success</div>
 								<div class="panel-body">
 									<div class="row">
-										<div id="result-score" class="col-xs-1">#</div>
-										<div id="result-info" class="col-xs-11">
+										<div id="np-result-score" class="col-xs-1 result-score">#</div>
+										<div id="np-result-info" class="col-xs-11 result-info">
 											<p>Please enter all above values to calculate likelihood of success.</p>
 										</div>
 									</div>
@@ -143,7 +152,39 @@ gtag('config', 'UA-37236817-4');
 					</div>
 				</div>
 			</div>
+		</div>
 
+		<div id="calc-cart" class="container">
+			<div class="row cart-row">
+				<div class="col-sm-7">
+					<div id="calc-cart-questions"></div>
+
+					<div id="cart-result-panel" class="panel panel-primary result-panel">
+						<div class="panel-heading result-heading">Likelihood of success</div>
+						<div class="panel-body">
+							<div class="row">
+								<div id="cart-result-score" class="col-xs-2 result-score">#</div>
+								<div class="col-xs-10 result-info">
+									<p id="cart-result-info">Please enter all above values to calculate likelihood of success.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			<div class="col-sm-5">
+				<div class="panel panel-info">
+					<div class="panel-heading"><strong>The CART Score</strong></div>
+					<div class="panel-body">
+						<p>The CART score is used to estimate the probability of successfully performing <a href="https://www.aafp.org/afp/1998/0901/p731.html">external cephalic version</a> (ECV) in the event of fetal breech presentation. It was created in a 2017 study of 1,253 pregnant women with a fetus in breech presentation (<a href="http://doi.org/10.1111/aogs.13161">Hutton EK, Simioni JC, Thabane L. Predictors of success of external cephalic version and cephalic presentation at birth among 1253 women with non-cephalic presentation using logistic regression and classification tree analyses. Acta Obstet Gynecol Scand. 2017;96(8):1012-1020</a>). It used a classification and regression tree (CART) analysis to identify several factors highly correlated with ECV success, and organized these factors into a clinically-usable algorithm.
+						<p>This website is provided for informational use only, and is not intended to provide medical or professional advice. Healthcare practioners should exercise their own clinical judgement in the use of this website. Non-healthcare practioners should consult a healthcare practioner regarding medical concerns; use of this website is at their own risk.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+
+		<div class="container">
 			<div class="row">
 				<div id="copyright" class="col-sm-12">
 					<div class="well well-sm">
@@ -151,11 +192,12 @@ gtag('config', 'UA-37236817-4');
 					</div>
 				</div>
 			</div>
+		</div>
 
-			<script src="js/jquery-3.3.1.min.js"></script>
-			<script src="js/popper.min.js"></script>
-			<script src="js/bootstrap.min.js"></script>
-			<script src="js/npcalc.js"></script>
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/popper.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/npcalc.js"></script>
 	</body>
 </html>
 
